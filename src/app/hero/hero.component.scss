@@ -1,12 +1,26 @@
-*{
+section {
   height: 100vh;
   background-image: url("../../../public/hero.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  object-fit: cover;
+  display: flex;
+
 }
 
-section {
+.down_arrow {
+  border: solid rgba(61, 207, 182, 1) 2px;
+  width: 30px;
+  height: 48px;
+  border-radius: 16px;
+}
 
+span {
+  font-family: "Fira Code", sans-serif;
+  color: white;
+}
+
+h1 {
+  font-family: Karla, sans-serif;
+  color: white;
 }
