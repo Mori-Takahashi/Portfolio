@@ -1,5 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
 
+/*COLORS*/
+$color-primary_hover: rgba(61, 207, 182, 1);
+$color-primary: white;
+$font-primary: Karla, sans-serif;
+$font-secondary: "Fira Code", sans-serif;
 
 
 /* FONTS */
@@ -37,8 +42,22 @@ body {
 }
 
 button {
-  border: none;
+  border-radius: 16px;
+  padding: 8px 16px;
+  border: white 2px solid;
+  background-color: Transparent;
+  background-repeat:no-repeat;
+  cursor:pointer;
+  overflow: hidden;
+  color: white;
+  font-family: Karla, sans-serif;
+  &:hover {
+    border: rgba(61, 207, 182, 1) 2px solid;
+  }
 }
+
+
+
 
 a {
   text-decoration: none;
@@ -49,3 +68,61 @@ a {
     color: rgba(61, 207, 182, 1);
   }
 }
+
+
+/*Alternativen*/
+
+/*button*/
+/*button {
+  --color: #ffffff;
+  padding: 0.8em 1.7em;
+  background-color: transparent;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: .5s;
+  font-weight: 400;
+  font-size: 17px;
+  border: 1px solid;
+  font-family: inherit;
+  text-transform: uppercase;
+  color: var(--color);
+  z-index: 1;
+}
+
+button::before, button::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 50px;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+  background-color: var(--color);
+  transition: 1s ease;
+}
+
+button::before {
+  top: -1em;
+  left: -1em;
+}
+
+button::after {
+  left: calc(100% + 1em);
+  top: calc(100% + 1em);
+}
+
+button:hover::before, button:hover::after {
+  height: 410px;
+  width: 410px;
+}
+
+button:hover {
+  color: rgb(10, 25, 30);
+}
+
+button:active {
+  filter: brightness(.8);
+}*/
