@@ -39,6 +39,7 @@ $font-secondary: "Fira Code", sans-serif;
 
 body {
   margin: 0;
+  cursor: url('../public/arrow_selector_tool.png'), auto;
 }
 
 button {
@@ -68,6 +69,36 @@ a {
     color: rgba(61, 207, 182, 1);
   }
 }
+
+
+body {
+  --sb-track-color: #232E33;
+  --sb-thumb-color: #3dcfb6;
+  --sb-size: 14px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size)
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 9px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 9px;
+  border: 3px solid #232E33;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color)
+    var(--sb-track-color);
+  }
+}
+
 
 
 /*Alternativen*/
