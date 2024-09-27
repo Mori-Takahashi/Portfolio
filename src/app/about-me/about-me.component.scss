@@ -22,8 +22,20 @@ h2 {
 /*  justify-content: space-around;*/
 }
 
-.owner-hover-image:hover {
+.owner-hover-image {
+  display: inline-block;
+  transition: box-shadow 0.3s ease, border 0.3s ease, transform 0.3s ease;
+  border-radius: 25px;
+}
 
+.owner-hover-image:hover {
+  box-shadow: 0 0 40px rgba(61, 207, 182, 0.5);
+  transform: translateY(-5px) scale(1.05);
+  -webkit-transform: translateY(-5px);
+  -moz-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  -o-transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 .WIA {
