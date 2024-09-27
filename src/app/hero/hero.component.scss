@@ -5,7 +5,7 @@ section {
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
-
+  justify-content: space-between;
 }
 
 .down_arrow {
@@ -13,14 +13,139 @@ section {
   width: 30px;
   height: 48px;
   border-radius: 16px;
+  cursor: pointer;
+  overflow: hidden;
+  > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    transition: height 175ms;
+    animation: heightAnimation 500ms infinite alternate;
+  }
+}
+
+@keyframes heightAnimation {
+  from {
+    height: 50%;
+  }
+  to {
+    height: 125%;
+  }
+}
+
+.title_name {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
 }
 
 span {
   font-family: "Fira Code", sans-serif;
   color: white;
+  font-size: clamp(1rem, 4vw, 2.5rem);
 }
 
 h1 {
   font-family: Karla, sans-serif;
   color: white;
+  font-size: clamp(2rem, 8vw, 8rem);
+  margin: 0;
 }
+
+.social_media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 40px;
+  justify-content: flex-end;
+  >a {
+    margin-bottom: 15px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+  }
+}
+
+svg {
+  fill: white;
+  &:hover {
+    fill: rgba(61, 207, 182, 1);
+  }
+}
+
+.socail_media_icons {
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons_work_contactme {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.arrow {
+  display: flex;
+  flex-direction: column;
+  margin-left: 40px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.vertical_line {
+  width: 2px;
+  height: 25vh;
+  background-color: rgba(61, 207, 182, 1);
+  transform: translateX(-50%);
+}
+
+
+.banderole {
+  overflow: hidden;
+  position: absolute;
+  height: 50px;
+  left: 0;
+  right: 0;
+  bottom: 80px;
+  display: flex;
+  align-items: center;
+  backdrop-filter: blur(5.300000190734863px);
+  background-color: rgba(255, 255, 255, 0.12);
+  transform: rotate(357deg);
+  max-width: 1920px;
+}
+
+.marquee {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.marquee__inner {
+  display: flex;
+  animation: marquee 20s linear infinite;
+  >span {
+    color: #3DCFB6FF;
+    font-family: Karla, sans-serif;
+  }
+}
+
+.marquee__inner span {
+  flex-shrink: 0;
+  padding-right: 50px;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+
