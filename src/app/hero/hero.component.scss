@@ -5,7 +5,6 @@ section {
   background-position: center;
   background-repeat: no-repeat;
   display: flex;
-/*  align-items: center;*/
   justify-content: space-between;
 }
 
@@ -54,13 +53,6 @@ h1 {
   font-size: clamp(2rem, 8vw, 8rem);
   margin: 0;
 }
-
-/*
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-*/
 
 .social_media {
   display: flex;
@@ -112,12 +104,48 @@ svg {
 
 
 .banderole {
+  overflow: hidden;
   position: absolute;
-  border: white 1px solid;
   height: 50px;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 80px;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(5.300000190734863px);
+  background-color: rgba(255, 255, 255, 0.12);
+  transform: rotate(357deg);
+  max-width: 1920px;
 }
+
+.marquee {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.marquee__inner {
+  display: flex;
+  animation: marquee 20s linear infinite;
+  >span {
+    color: #3DCFB6FF;
+    font-family: Karla, sans-serif;
+  }
+}
+
+.marquee__inner span {
+  flex-shrink: 0;
+  padding-right: 50px;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+
+
+
