@@ -4,6 +4,7 @@ import {HeroComponent} from "./hero/hero.component";
 import {HeaderComponent} from "./share/header/header.component";
 import {AboutMeComponent} from "./about-me/about-me.component";
 import {SkillSetComponent} from "./skill-set/skill-set.component";
+import {ProjecsComponent} from "./projecs/projecs.component";
 
 @Component({
   selector: 'app-root',
@@ -13,7 +14,8 @@ import {SkillSetComponent} from "./skill-set/skill-set.component";
     HeroComponent,
     HeaderComponent,
     AboutMeComponent,
-    SkillSetComponent
+    SkillSetComponent,
+    ProjecsComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
