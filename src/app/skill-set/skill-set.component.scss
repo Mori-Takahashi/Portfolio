@@ -1,8 +1,18 @@
 section {
-  height: 50vh;
+  height: 100vh;
   font-family: Karla, sans-serif;
   color: #3dcfb6;
-  margin: 40px;
+  background-image: url("../../../public/SkillBackground.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.padding-div {
+  padding: 64px;
 }
 
 span {
