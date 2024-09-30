@@ -35,4 +35,14 @@
 
     <!--END!!!!-->
   </div>
+
+  <!--glow cursor-->
+  <div
+    class="mouse-glow"
+    [ngStyle]="{
+    'left.px': mouseX,
+    'top.px': mouseY,
+    'opacity': isMouseInWindow ? 1 : 0
+  }"
+  ></div>
 </section>
