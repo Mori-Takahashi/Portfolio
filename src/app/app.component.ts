@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import {HeroComponent} from "./hero/hero.component";
 import {HeaderComponent} from "./share/header/header.component";
 import {AboutMeComponent} from "./about-me/about-me.component";
+import {SkillSetComponent} from "./skill-set/skill-set.component";
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,8 @@ import {AboutMeComponent} from "./about-me/about-me.component";
     RouterOutlet,
     HeroComponent,
     HeaderComponent,
-    AboutMeComponent
+    AboutMeComponent,
+    SkillSetComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
