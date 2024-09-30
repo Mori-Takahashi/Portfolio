@@ -67,3 +67,19 @@ h2 {
 .ico-img {
   margin-right: 10px;
 }
+
+.mouse-glow {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  pointer-events: none;
+  border-radius: 50%;
+  background: radial-gradient(
+      circle,
+      rgba(50, 110, 100, 0.2) 0%,
+      rgba(50, 110, 100, 0) 80%
+  );
+  transform: translate(-50%, -50%);
+  mix-blend-mode: screen;
+  z-index: 1000;
+}
