@@ -47,7 +47,8 @@
         <img src="icons/angular.svg" alt="Angular">
         <span>Angular</span>
       </div>
-      <div class="image-text-container">
+      <div id="firebase" class="image-text-container">
+        <img id="growBubble" class="showBubble" src="icons/GrowBubble.svg" alt="Grow Bubble">
         <img src="icons/Firebase.svg" alt="Firebase">
         <span>Firebase</span>
       </div>
@@ -64,7 +65,7 @@
         <span>Scrum</span>
       </div>
       <div class="image-text-container">
-        <img src="icons/GrowthMindset.svg" alt="Mindset">
+        <img id="mindsetImage" class="cursor-pointer" src="icons/GrowthMindset.svg" alt="Mindset" (click)="toggleBubble()">
         <span>Growth <br> mindset</span>
       </div>
     </div>

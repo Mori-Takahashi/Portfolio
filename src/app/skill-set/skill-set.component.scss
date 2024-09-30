@@ -23,6 +23,10 @@ h2 {
   /*  justify-content: space-around;*/
 }
 
+.d-non {
+  display: none;
+}
+
 .card-div {
   display: flex;
   flex-direction: column;
@@ -70,15 +74,17 @@ h3 {
   flex-direction: column;
 }
 
-.image-text-container {
+.image-text-container{
   img {
     max-width: 100%;
     height: auto;
     transition: transform 0.3s ease-in-out;
+  }
+}
 
-    &:hover {
-      animation: bounce 0.5s;
-    }
+.image-text-container img:not(.showBubble):not(.showBubble.active) {
+  &:hover {
+    animation: bounce 0.5s;
   }
 }
 
@@ -97,4 +103,43 @@ h3 {
 .image-text-container span {
   margin-top: 10px;
   font-size: 1rem;
+}
+
+.showBubble {
+  display: none;
+  opacity: 0;
+}
+
+
+.showBubble.active {
+  display: block;
+  position: absolute;
+  opacity: 1;
+  -webkit-animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation: fade-in-bottom 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+@-webkit-keyframes showBubble {
+  0% {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in-bottom {
+  0% {
+    -webkit-transform: translateY(50px);
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
