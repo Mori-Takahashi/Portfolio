@@ -10,6 +10,7 @@ import { Component } from '@angular/core';
 
 
 export class ProjecsComponent {
+
   procjects: Projecs[] = [{
     name: 'Join',
     tecUsed: 'HTML | CSS | JavaScript | Firebase'
@@ -18,6 +19,8 @@ export class ProjecsComponent {
       name: 'El Pollo Loco',
       tecUsed: 'HTML | CSS | JavaScript'
     }];
+
+
 
   openProject(projectID: number) {
     console.log(`Open project ${projectID}`);

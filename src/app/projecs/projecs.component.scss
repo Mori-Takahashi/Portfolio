@@ -96,4 +96,59 @@ span {
   height: 100%;
   background-color: rgba(128, 128, 128, 0.5); // leicht durchsichtiger grauer Hintergrund
   z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  border: solid 1px rgba(61, 207, 182, 1);
+  width: 80vw;
+  height: 60vh;
+  border-radius: 50px;
+  background-image: url("../../../public/hero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px;
+}
+
+.title-number {
+  margin: 0;
+  >h2 {
+    margin: 0;
+    font-size: 64px;
+  }
+  h1{
+    font-family: "Fira Code", sans-serif;
+    color: white;
+    margin: 0;
+    font-size: 128px;
+  }
+}
+
+
+.close {
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 30px;
+  &:hover {
+    cursor: pointer;
+    color: rgba(61, 207, 182, 1);
+  }
+}
+
+.tec-used-card {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  >span {
+    margin-left: 10px;
+  }
+}
+
+.d-flex {
+  display: flex;
 }
