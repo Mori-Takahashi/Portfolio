@@ -1,0 +1,59 @@
+<section>
+  <div class="content">
+    <h3>Portfolio</h3>
+    <div>
+      <h2>Featured Projects</h2>
+      <span>
+        Explore a selection of my work here - Interact with
+        projects to see my skills in action.
+      </span>
+    </div>
+    <!--for hier einbauen-->
+    @for (item of procjects; track $index) {
+      <div (click)="openProject($index)" class="project-list">
+        <div class="project-border">
+          <h3>{{item.name}}</h3>
+          <div class="tec-used">
+            <span>{{item.tecUsed}}</span>
+            <div class="arrow-right" style="color: white">&#8599;</div>
+          </div>
+        </div>
+      </div>
+    }
+    <!--for ende-->
+  </div>
+
+  <!--project Card-->
+  <div class="project-card">
+    <div class="card">
+
+      <div>
+        <div class="title-number">
+          <h1>01</h1>
+          <h2>Join</h2>
+        </div>
+        <div>
+          <h3>What is this project about</h3>
+          <span>Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.</span>
+        </div>
+        <div class="d-flex">
+          <div class="tec-used-card">
+            <img src="icons/card_CSS.svg" alt="css">
+            <span>CSS</span>
+          </div>
+          <div class="tec-used-card">
+            <img src="icons/card_HTML.svg" alt="HTML">
+            <span>HTML</span>
+          </div>
+        </div>
+      </div>
+      <div class="img-close">
+        <button class="close-button">&#10006;</button>
+        <img src="project-img/join.svg" alt="Join">
+        <button class="next-project">Next projects &#10230;</button>
+      </div>
+    </div>
+  </div>
+  <!--project Card-->
+</section>
+
