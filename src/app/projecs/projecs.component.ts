@@ -39,19 +39,25 @@ export class ProjecsComponent {
       name: 'Join',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       tecUsed: ['CSS', 'HTML', 'JavaScript'],
-      imageUrl: 'project-img/join.svg'
+      imageUrl: 'project-img/join.svg',
+      liveTest: 'https://join-board.pages.dev/',
+      github: 'https://github.com/Mori-Takahashi/Join-board'
     },
     {
       name: 'El Pollo Loco',
       description: 'A mini Jump and Run game. Collect coins and salsa to defeat the evil chicken.',
       tecUsed: ['HTML', 'CSS', 'JavaScript'],
-      imageUrl: 'project-img/el-pollo-loco.svg'
+      imageUrl: 'project-img/el-pollo-loco.svg',
+      liveTest: 'https://el-pollo-loco.pages.dev/',
+      github: 'https://github.com/Mori-Takahashi/el-pollo-loco'
     },
     {
       name: 'Pokedex',
       description: 'A Pokedex app that allows you to search for Pokemon by name. Displays information about the Pokemon and its abilities.',
       tecUsed: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
-      imageUrl: 'project-img/pokedex.png'
+      imageUrl: 'project-img/pokedex.png',
+      liveTest: '',
+      github: 'https://github.com/Mori-Takahashi/Pokedex'
     }
   ];
 

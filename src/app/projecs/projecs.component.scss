@@ -177,7 +177,8 @@ span {
   background-repeat: no-repeat;
   padding: 20px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-end;
   justify-content: space-between;
 }
 
@@ -212,6 +213,7 @@ span {
   border: none;
   transition: none;
   font-size: 40px;
+  height: 0;
   &:hover {
     cursor: pointer;
     color: rgba(61, 207, 182, 1);
@@ -227,6 +229,11 @@ span {
   >span {
     margin-left: 10px;
   }
+}
+
+.img-title {
+  display: flex;
+  flex-direction: column;
 }
 
 .d-flex {
@@ -261,4 +268,10 @@ span {
 
 .explore-more-text {
   margin-bottom: 15px;
+}
+
+.c-space-between-width-100 {
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
 }
