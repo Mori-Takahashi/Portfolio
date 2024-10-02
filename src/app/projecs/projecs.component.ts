@@ -18,6 +18,10 @@ export class ProjecsComponent {
     {
       name: 'El Pollo Loco',
       tecUsed: 'HTML | CSS | JavaScript'
+    },
+    {
+    name: 'Pokedex',
+    tecUsed: 'HTML | CSS | JavaScript | Bootstrap'
     }];
 
 
@@ -33,4 +37,12 @@ export class ProjecsComponent {
 type Projecs = {
   name: string;
   tecUsed: string;
+}
+
+type CardProjects = {
+  number: number;
+  name: string;
+  about: string;
+  tecUsed: string;
+  img: string;
 }
