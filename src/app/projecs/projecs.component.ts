@@ -20,15 +20,18 @@ export class ProjecsComponent {
 
   procjects: Projecs[] = [{
     name: 'Join',
-    tecUsed: 'HTML | CSS | JavaScript | Firebase'
+    tecUsed: 'HTML | CSS | JavaScript | Firebase',
+    miniImg: 'project-img/join.svg'
   },
     {
       name: 'El Pollo Loco',
-      tecUsed: 'HTML | CSS | JavaScript'
+      tecUsed: 'HTML | CSS | JavaScript',
+      miniImg: 'project-img/el-pollo-loco.svg'
     },
     {
     name: 'Pokedex',
-    tecUsed: 'HTML | CSS | JavaScript | Bootstrap'
+    tecUsed: 'HTML | CSS | JavaScript | Bootstrap',
+      miniImg: 'project-img/pokedex.png'
     }];
 
   cardProjects = [
@@ -141,4 +144,5 @@ export class ProjecsComponent {
 type Projecs = {
   name: string;
   tecUsed: string;
+  miniImg: string;
 }

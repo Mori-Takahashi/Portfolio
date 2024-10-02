@@ -23,6 +23,8 @@ span {
   margin: 64px;
 }
 
+
+
 .project-list {
   width: 80%;
   cursor: pointer;
@@ -34,8 +36,41 @@ span {
   }
 }
 
+.miniProjectCard {
+  visibility: hidden;
+}
+
 .arrow-right {
   visibility: hidden;
+}
+
+.content-click {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  >img {
+    width: 115px;
+    border-radius: 18px;
+    box-shadow: 0 0 0 1px rgba(61, 207, 182, 1);
+    animation: pulsierender-schatten 2s infinite;
+  }
+  &:hover {
+    .miniProjectCard {
+      visibility: visible;
+    }
+  }
+}
+
+@keyframes pulsierender-schatten {
+  0% {
+    box-shadow: 0 0 0 1px rgba(61, 207, 182, 1);
+  }
+  50% {
+    box-shadow: 0 0 10px 5px rgba(61, 207, 182, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 0 1px rgba(61, 207, 182, 1);
+  }
 }
 
 .project-border {
@@ -46,7 +81,6 @@ span {
   align-items: center;
   height: 58px;
   padding: 15px;
-  margin-top: 50px;
 }
 
 .tec-used {
@@ -223,4 +257,8 @@ span {
     color: rgba(61, 207, 182, 1);
     box-shadow: none;
   }
+}
+
+.explore-more-text {
+  margin-bottom: 15px;
 }
