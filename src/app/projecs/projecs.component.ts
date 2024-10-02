@@ -1,9 +1,16 @@
 import { Component } from '@angular/core';
+import {DecimalPipe} from "@angular/common";
+import {NgFor} from "@angular/common";
+import {NgIf} from "@angular/common";
 
 @Component({
   selector: 'app-projecs',
   standalone: true,
-  imports: [],
+  imports: [
+    DecimalPipe,
+    NgFor,
+    NgIf
+  ],
   templateUrl: './projecs.component.html',
   styleUrl: './projecs.component.scss'
 })
@@ -24,12 +31,109 @@ export class ProjecsComponent {
     tecUsed: 'HTML | CSS | JavaScript | Bootstrap'
     }];
 
+  cardProjects = [
+    {
+      name: 'Join',
+      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+      tecUsed: ['CSS', 'HTML', 'JavaScript'],
+      imageUrl: 'project-img/join.svg'
+    },
+    {
+      name: 'El Pollo Loco',
+      description: 'A mini Jump and Run game. Collect coins and salsa to defeat the evil chicken.',
+      tecUsed: ['HTML', 'CSS', 'JavaScript'],
+      imageUrl: 'project-img/el-pollo-loco.svg'
+    },
+    {
+      name: 'Pokedex',
+      description: 'A Pokedex app that allows you to search for Pokemon by name. Displays information about the Pokemon and its abilities.',
+      tecUsed: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
+      imageUrl: 'project-img/pokedex.png'
+    }
+  ];
 
+  /**
+   * The currently selected project.
+   * Initialized to `null`.
+   */
+  selectedProject: any = null;
 
-  openProject(projectID: number) {
-    console.log(`Open project ${projectID}`);
+  /**
+   * The index of the currently selected project.
+   */
+  selectedProjectIndex: number = 0;
+
+  /**
+   * Opens the project at the specified index.
+   * Updates `selectedProject` and `selectedProjectIndex` accordingly.
+   *
+   * @param {number} index - The index of the project to open.
+   */
+  openProject(index: number) {
+    this.selectedProject = this.cardProjects[index];
+    this.selectedProjectIndex = index;
+    document.body.style.overflow = 'hidden';
+    setTimeout(() => {
+      this.playAnimation('slide-in');
+    }, 500);
   }
 
+  /**
+   * Plays the specified animation on the project card.
+   *
+   * @param {string} animation - The name of the animation to play.
+   *                             Can be 'slide-in' or 'slide-out'.
+   */
+  playAnimation(animation: string) {
+    let card = document.getElementById('animation');
+    if (card && animation === 'slide-in') {
+      card.classList.add('slide-in-right');
+      card.classList.add('project-card');
+    } else if (card && animation === 'slide-out') {
+      card.classList.remove('slide-in-right');
+      card.classList.add('slide-out-right');
+      setTimeout(() => {
+        card.classList.remove('project-card');
+      }, 500);
+    }
+  }
+
+  /**
+   * Closes the currently open project.
+   * Sets `selectedProject` to `null`.
+   */
+  closeProject() {
+    this.selectedProject = null;
+    document.body.style.overflow = 'auto';
+    this.playAnimation('slide-out');
+  }
+
+  /**
+   * Advances to the next project in the `cardProjects` array.
+   * Updates `selectedProjectIndex` and `selectedProject` accordingly.
+   */
+  nextProject() {
+    this.selectedProjectIndex = (this.selectedProjectIndex + 1) % this.cardProjects.length;
+    this.selectedProject = this.cardProjects[this.selectedProjectIndex];
+  }
+
+  /**
+   * Returns the icon path for a given technology.
+   * @param {string} tech - The name of the technology.
+   * @returns {string} The path to the icon for the specified technology.
+   */
+  getTechIcon(tech: string) {
+    let iconMap: { [key: string]: string } = {
+      'CSS': 'icons/card_CSS.svg',
+      'HTML': 'icons/card_HTML.svg',
+      'Angular': 'icons/card_Angular.svg',
+      'TypeScript': 'icons/card_TS.svg',
+      'JavaScript': 'icons/card_JavaScript.svg',
+      'Firebase': 'icons/card_Firebase.svg',
+      'Bootstrap': 'icons/card_bootstrap.svg',
+    };
+    return iconMap[tech];
+  }
 }
 
 
@@ -37,12 +141,4 @@ export class ProjecsComponent {
 type Projecs = {
   name: string;
   tecUsed: string;
-}
-
-type CardProjects = {
-  number: number;
-  name: string;
-  about: string;
-  tecUsed: string;
-  img: string;
 }
