@@ -1,0 +1,24 @@
+<section>
+  <div class="card">
+    <div class="text">
+      {{reviewService.reviews[currentIndex].text}}
+    </div>
+    <div class="aut-line">
+      <div></div>
+      <span>{{reviewService.reviews[currentIndex].author}}</span>
+    </div>
+  </div>
+  <div class="margin-top-10">
+    <button (click)="nextReview()">&larr;</button>
+
+    @for (dot of reviewService.reviews; track $index){
+      @if (currentIndex === $index) {
+        <div class="dot-active"></div>
+      } @else {
+        <div class="dot"></div>
+      }
+    }
+
+    <button (click)="prevReview()">&#8594;</button>
+  </div>
+</section>
