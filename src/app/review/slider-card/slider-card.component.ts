@@ -6,10 +6,10 @@ import {NgClass} from "@angular/common";
   selector: 'app-slider-card',
   standalone: true,
   imports: [
-    NgClass
+    NgClass,
   ],
   templateUrl: './slider-card.component.html',
-  styleUrl: './slider-card.component.scss'
+  styleUrl: './slider-card.component.scss',
 })
 export class SliderCardComponent {
 
