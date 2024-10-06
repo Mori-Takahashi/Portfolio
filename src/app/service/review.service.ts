@@ -11,6 +11,7 @@ export class ReviewService {
         'Notably, his humor consistently create a motivating work atmosphere. Lyonel was a valuable asset to our team, and we look forward to more' +
         'projects together.',
       author: 'Philipp Buckstegen',
+      authorImg: 'colleagues_img/philipp.jpg'
     },
     {
       text: 'Working with Lyonel Berzen was consistently rewarding and enjoyable. Lyonel’s youthful dynamism and talent add substantial value to any' +
@@ -21,6 +22,7 @@ export class ReviewService {
         'efficiently and deadlines are met with high-quality results. Lyonel Berzen is undoubtedly an asset to any team, and he has a bright future ahead' +
         'of him.',
       author: 'Tayfun Aya',
+      authorImg: 'colleagues_img/ty.png'
     }
   ];
 

@@ -1,11 +1,36 @@
 <section>
-  <div class="card">
-    <div class="text">
-      {{reviewService.reviews[currentIndex].text}}
+  <div class="card-slider-styling">
+    <div class="card">
+      <div class="text">
+        {{reviewService.reviews[rightCard].text}}
+      </div>
+      <div class="aut-line">
+        <img src="{{reviewService.reviews[rightCard].authorImg}}" alt="{{reviewService.reviews[rightCard].author}}">
+        <div></div>
+        <span>{{reviewService.reviews[rightCard].author}}</span>
+      </div>
     </div>
-    <div class="aut-line">
-      <div></div>
-      <span>{{reviewService.reviews[currentIndex].author}}</span>
+
+    <div class="card">
+      <div class="text">
+        {{reviewService.reviews[currentIndex].text}}
+      </div>
+      <div class="aut-line">
+        <img src="{{reviewService.reviews[currentIndex].authorImg}}" alt="{{reviewService.reviews[currentIndex].author}}">
+        <div></div>
+        <span>{{reviewService.reviews[currentIndex].author}}</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="text">
+        {{reviewService.reviews[leftCard].text}}
+      </div>
+      <div class="aut-line">
+        <img src="{{reviewService.reviews[leftCard].authorImg}}" alt="{{reviewService.reviews[leftCard].author}}">
+        <div></div>
+        <span>{{reviewService.reviews[leftCard].author}}</span>
+      </div>
     </div>
   </div>
 <!---->
