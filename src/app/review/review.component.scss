@@ -1,0 +1,21 @@
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  font-family: "Fira Code", sans-serif;
+  color: rgba(61, 207, 182, 1);
+}
+
+.review_slider {
+  height: 50vh;
+}
+
+app-slider-card {
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+}
