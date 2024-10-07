@@ -1,17 +1,23 @@
 <section>
   <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-    <label for="name">Name:</label>
-    <input id="name" formControlName="name" type="text" required>
+    <label for="name">What's your name?</label>
+    <input placeholder="Your name goes here" id="name" formControlName="name" type="text" required>
 
-    <label for="email">E-Mail:</label>
-    <input placeholder="TETS" id="email" formControlName="email" type="email" required>
+    <label for="email">What's your email?</label>
+    <input placeholder="youmail@email.com" id="email" formControlName="email" type="email" required>
 
-    <label for="message">Nachricht:</label>
-    <textarea id="message" formControlName="message" required></textarea>
+    <label for="message">How can i help you?</label>
+    <textarea placeholder="Hello Lyonel, I am interested in..." id="message" formControlName="message" required></textarea>
 
-    <!-- Turnstile Widget -->
-    <!--<div class="cf-turnstile" data-sitekey="0x4AAAAAAAw3NwmDISYzQJ5I"></div>-->
+    <label class="checkbox-policy">
+      <input type="checkbox" name="Privacy Policy" id="privacyPolicy" formControlName="privacyPolicy" required>
+      <span style="color: white">I've read the <a style="color: rgba(61, 207, 182, 1);" href="https://google.com">privacy policy</a> and agree to the processing of my data as outlined.</span>
+    </label>
 
-    <button type="submit">Senden</button>
+    <div class="button-container">
+      <!-- Turnstile Widget -->
+      <!--<div class="cf-turnstile" data-sitekey="0x4AAAAAAAw3NwmDISYzQJ5I"></div>-->
+      <button type="submit">Say Hello :)</button>
+    </div>
   </form>
 </section>

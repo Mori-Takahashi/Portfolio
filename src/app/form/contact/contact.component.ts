@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validator, Validators} from "@angular/forms";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-contact',
   standalone: true,
   imports: [
-    ReactiveFormsModule
-
+    ReactiveFormsModule,
+    RouterLink
   ],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss'
@@ -21,6 +22,7 @@ export class ContactComponent implements OnInit {
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       message: ['', Validators.required],
+      privacyPolicy: ['', Validators.requiredTrue],
       'cf-turnstile-response': ['', Validators.required],
     });
   }
@@ -29,8 +31,7 @@ export class ContactComponent implements OnInit {
     if (this.contactForm.valid) {
       console.log(this.contactForm.value);
     } else {
-      alert('Please fill out the form before submitting');
+      console.log('Form is invalid');
     }
   }
-
 }
