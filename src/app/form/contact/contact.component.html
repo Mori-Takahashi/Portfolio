@@ -1,1 +1,17 @@
-<p>contact works!</p>
+<section>
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+    <label for="name">Name:</label>
+    <input id="name" formControlName="name" type="text" required>
+
+    <label for="email">E-Mail:</label>
+    <input placeholder="TETS" id="email" formControlName="email" type="email" required>
+
+    <label for="message">Nachricht:</label>
+    <textarea id="message" formControlName="message" required></textarea>
+
+    <!-- Turnstile Widget -->
+    <!--<div class="cf-turnstile" data-sitekey="0x4AAAAAAAw3NwmDISYzQJ5I"></div>-->
+
+    <button type="submit">Senden</button>
+  </form>
+</section>

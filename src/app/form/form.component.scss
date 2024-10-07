@@ -5,7 +5,8 @@ section {
 .box-contact-contact-me-text {
   margin: 5%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }
 
 .left-contact-me-text {
@@ -35,4 +36,7 @@ p {
   margin-left: 5px;
 }
 
-
+.div-styling-contact-app {
+  width: 50%;
+  margin-left: 15px;
+}

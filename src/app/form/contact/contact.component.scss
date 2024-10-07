@@ -1,0 +1,30 @@
+@mixin placeholder {
+  &::-webkit-input-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &:-ms-input-placeholder { @content; }
+  &::placeholder { @content; }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  color: rgba(61, 207, 182, 1);
+  font-family: "Fira Code", sans-serif;
+
+  input,
+  textarea {
+    border: none;
+    border-bottom: 1px solid rgba(61, 207, 182, 1);
+    background-color: rgba(61, 207, 182, 0);
+    outline: none; /* Entfernt den Standard-Fokusrahmen */
+
+    &:focus {
+      border: none;
+      border-bottom: 1px solid rgba(61, 207, 182, 1);
+    }
+
+    @include placeholder {
+      color: rgba(61, 207, 182, 1);
+    }
+  }
+}
