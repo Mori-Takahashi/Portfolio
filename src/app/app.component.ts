@@ -6,6 +6,7 @@ import {AboutMeComponent} from "./about-me/about-me.component";
 import {SkillSetComponent} from "./skill-set/skill-set.component";
 import {ProjecsComponent} from "./projecs/projecs.component";
 import {ReviewComponent} from "./review/review.component";
+import {FormComponent} from "./form/form.component";
 
 @Component({
   selector: 'app-root',
@@ -17,7 +18,8 @@ import {ReviewComponent} from "./review/review.component";
     AboutMeComponent,
     SkillSetComponent,
     ProjecsComponent,
-    ReviewComponent
+    ReviewComponent,
+    FormComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
