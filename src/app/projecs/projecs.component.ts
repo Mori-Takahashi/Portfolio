@@ -56,7 +56,7 @@ export class ProjecsComponent {
       description: 'A Pokedex app that allows you to search for Pokemon by name. Displays information about the Pokemon and its abilities.',
       tecUsed: ['HTML', 'CSS', 'JavaScript', 'Bootstrap'],
       imageUrl: 'project-img/pokedex.png',
-      liveTest: '',
+      liveTest: 'https://pokedex.lyonelberzen.dev',
       github: 'https://github.com/Mori-Takahashi/Pokedex'
     }
   ];
