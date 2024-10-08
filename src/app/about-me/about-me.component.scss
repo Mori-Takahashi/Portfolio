@@ -69,7 +69,7 @@ h2 {
 }
 
 .mouse-glow {
-  position: absolute;
+  position: fixed;
   width: 150px;
   height: 150px;
   pointer-events: none;
@@ -82,4 +82,9 @@ h2 {
   transform: translate(-50%, -50%);
   mix-blend-mode: screen;
   z-index: 1000;
+}
+
+.content-wrapper {
+  position: relative;
+  overflow: hidden;
 }
