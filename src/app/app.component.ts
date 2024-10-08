@@ -7,6 +7,8 @@ import {SkillSetComponent} from "./skill-set/skill-set.component";
 import {ProjecsComponent} from "./projecs/projecs.component";
 import {ReviewComponent} from "./review/review.component";
 import {FormComponent} from "./form/form.component";
+import {FooterComponent} from "./share/footer/footer.component";
+
 
 @Component({
   selector: 'app-root',
@@ -19,7 +21,8 @@ import {FormComponent} from "./form/form.component";
     SkillSetComponent,
     ProjecsComponent,
     ReviewComponent,
-    FormComponent
+    FormComponent,
+    FooterComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
