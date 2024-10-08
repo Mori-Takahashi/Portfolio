@@ -18,30 +18,51 @@ export class AboutMeComponent {
 
   constructor(private ngZone: NgZone) {}
 
+  /**
+   * Handles the mousemove event on the document.
+   * Updates the mouseX and mouseY properties with the current mouse position.
+   * Ensures the update runs outside Angular's zone to avoid triggering change detection.
+   *
+   * @param event - The MouseEvent object.
+   */
   @HostListener('document:mousemove', ['$event'])
   onMouseMove(event: MouseEvent) {
-    this.isMouseInWindow = true;  // Maus ist im Fenster
+    this.isMouseInWindow = true;
     this.ngZone.runOutsideAngular(() => {
       if (this.requestId) {
         cancelAnimationFrame(this.requestId);
       }
       this.requestId = requestAnimationFrame(() => {
-        this.mouseX = event.pageX;
-        this.mouseY = event.pageY;
+        this.mouseX = event.clientX;
+        this.mouseY = event.clientY;
       });
     });
   }
 
+  /**
+   * Handles the mouseout event on the window.
+   * Sets the isMouseInWindow property to false if the mouse leaves the window.
+   *
+   * @param event - The MouseEvent object.
+   */
   @HostListener('window:mouseout', ['$event'])
   onMouseOut(event: MouseEvent) {
-    // Prüfe, ob die Maus das Fenster verlassen hat
-    if (!event.relatedTarget || (event.relatedTarget as Node).nodeName === 'HTML') {
-      this.isMouseInWindow = false;  // Maus ist außerhalb des Fensters
+    if (
+      !event.relatedTarget ||
+      (event.relatedTarget as Node).nodeName === 'HTML'
+    ) {
+      this.isMouseInWindow = false;
     }
   }
 
+  /**
+   * Handles the mouseover event on the window.
+   * Sets the isMouseInWindow property to true when the mouse enters the window.
+   *
+   * @param event - The MouseEvent object.
+   */
   @HostListener('window:mouseover', ['$event'])
   onMouseOver(event: MouseEvent) {
-    this.isMouseInWindow = true;  // Maus ist wieder im Fenster
+    this.isMouseInWindow = true;
   }
 }
