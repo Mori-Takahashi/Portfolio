@@ -96,6 +96,7 @@ export class ProjecsComponent {
   playAnimation(animation: string) {
     let card = document.getElementById('animation');
     if (card && animation === 'slide-in') {
+      card.classList.remove('d-non');
       card.classList.add('slide-in-right');
       card.classList.add('project-card');
     } else if (card && animation === 'slide-out') {
@@ -112,9 +113,11 @@ export class ProjecsComponent {
    * Sets `selectedProject` to `null`.
    */
   closeProject() {
-    this.selectedProject = null;
     document.body.style.overflow = 'auto';
     this.playAnimation('slide-out');
+    setTimeout(() => {
+      this.selectedProject = null;
+    }, 500);
   }
 
   /**
