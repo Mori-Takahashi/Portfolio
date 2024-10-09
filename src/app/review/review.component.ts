@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {NgClass, NgForOf} from "@angular/common";
 import {SliderCardComponent} from "./slider-card/slider-card.component";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-review',
@@ -8,7 +9,8 @@ import {SliderCardComponent} from "./slider-card/slider-card.component";
   imports: [
     NgForOf,
     NgClass,
-    SliderCardComponent
+    SliderCardComponent,
+    TranslateModule
   ],
   templateUrl: './review.component.html',
   styleUrl: './review.component.scss'

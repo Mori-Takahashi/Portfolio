@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import {DecimalPipe} from "@angular/common";
 import {NgFor} from "@angular/common";
 import {NgIf} from "@angular/common";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-projecs',
@@ -9,7 +10,8 @@ import {NgIf} from "@angular/common";
   imports: [
     DecimalPipe,
     NgFor,
-    NgIf
+    NgIf,
+    TranslateModule
   ],
   templateUrl: './projecs.component.html',
   styleUrl: './projecs.component.scss'
