@@ -3,6 +3,7 @@ import {DecimalPipe} from "@angular/common";
 import {NgFor} from "@angular/common";
 import {NgIf} from "@angular/common";
 import {TranslateModule} from "@ngx-translate/core";
+import {HeaderComponent} from "../share/header/header.component";
 
 @Component({
   selector: 'app-projecs',
@@ -11,7 +12,8 @@ import {TranslateModule} from "@ngx-translate/core";
     DecimalPipe,
     NgFor,
     NgIf,
-    TranslateModule
+    TranslateModule,
+    HeaderComponent
   ],
   templateUrl: './projecs.component.html',
   styleUrl: './projecs.component.scss'
@@ -19,6 +21,17 @@ import {TranslateModule} from "@ngx-translate/core";
 
 
 export class ProjecsComponent {
+
+  /*constructor(private translateStatus: HeaderComponent) {
+  }
+
+  getTranslateStatus() {
+    if (this.translateStatus) {
+      console.log('The language is English');
+    } else {
+      console.log('The language is German');
+    }
+  }*/
 
   procjects: Projecs[] = [{
     name: 'Join',

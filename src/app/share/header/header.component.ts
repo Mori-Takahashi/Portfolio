@@ -15,12 +15,17 @@ export class HeaderComponent {
 
   constructor(private translate: TranslationService) {}
 
+
+  translateStatus: boolean = false;
+
   onCheckboxChange(event: Event): void{
     let isChecked = (event.target as HTMLInputElement).checked;
     if (isChecked) {
       this.translate.switchLanguage('en');
+      this.translateStatus = true;
     } else {
       this.translate.switchLanguage('de');
+      this.translateStatus = false;
     }
   }
 
