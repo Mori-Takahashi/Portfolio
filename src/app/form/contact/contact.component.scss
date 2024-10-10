@@ -19,12 +19,19 @@ textarea::-webkit-scrollbar-thumb {
 form {
   display: flex;
   flex-direction: column;
+  align-items: center;
   color: rgba(61, 207, 182, 1);
   font-family: "Fira Code", sans-serif;
   width: 100%;
 
   label {
     margin-bottom: 5px;
+  }
+
+  label,
+  input,
+  textarea {
+    width: 100%;
   }
 
   input,
@@ -79,8 +86,6 @@ form {
 /* Media Queries für Responsivität */
 @media (min-width: 768px) {
   form {
-    flex-direction: row;
-    flex-wrap: wrap;
 
     label,
     input,
@@ -89,7 +94,7 @@ form {
       margin-right: 4%;
 
       &:nth-child(2n) {
-        margin-right: 0;
+        /*margin-right: 0;*/
       }
     }
 
