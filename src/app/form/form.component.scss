@@ -40,3 +40,10 @@ p {
   width: 50%;
   margin-left: 15px;
 }
+
+@media (max-width: 900px) {
+  .box-contact-contact-me-text {
+    flex-direction: column;
+    align-items: unset;
+  }
+}
