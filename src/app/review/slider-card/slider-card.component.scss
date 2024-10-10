@@ -26,8 +26,6 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
-  margin: 20px;
 }
 
 .margin-top-10 {
@@ -121,4 +119,31 @@ button {
 .text::-webkit-scrollbar-thumb {
   background: var(--sb-thumb-color);
   border-radius: 9px;
+}
+
+@media (max-width: 900px) {
+
+  .card-slider-styling {
+    width: 100vw;
+  }
+
+  .card {
+    width: 100%;
+/*    margin: 10px 0;*/
+    /**/
+    border: solid 1px rgba(61, 207, 182, 1);
+    padding: 20px;
+    border-radius: 16px;
+    background-color: rgba(47, 91, 84, 0.8);
+    margin: unset;
+    transition: opacity 0.3s, transform 0.3s;
+    overflow: hidden;
+    max-height: unset;
+  }
+
+  .text {
+    overflow-x: hidden;
+  }
+
+
 }

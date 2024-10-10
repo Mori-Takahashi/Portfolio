@@ -16,3 +16,12 @@ app-slider-card {
   justify-content: space-between;
   height: 100%;
 }
+
+@media (max-width: 900px) {
+  .review_slider {
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
