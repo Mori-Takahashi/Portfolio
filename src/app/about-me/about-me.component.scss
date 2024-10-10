@@ -18,8 +18,7 @@ h2 {
   margin: 64px;
   height: 100vh;
   display: flex;
-
-/*  justify-content: space-around;*/
+  /* justify-content: space-around; */
 }
 
 .owner-hover-image {
@@ -31,11 +30,6 @@ h2 {
 .owner-hover-image:hover {
   box-shadow: 0 0 40px rgba(61, 207, 182, 0.5);
   transform: translateY(-5px) scale(1.05);
-  -webkit-transform: translateY(-5px);
-  -moz-transform: translateY(-5px);
-  -ms-transform: translateY(-5px);
-  -o-transform: translateY(-5px);
-  transform: translateY(-5px);
 }
 
 .WIA {
@@ -87,4 +81,58 @@ h2 {
 .content-wrapper {
   position: relative;
   overflow: hidden;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .content {
+    flex-direction: column;
+    margin: 32px;
+    height: auto;
+  }
+
+  .card-div {
+    margin-left: 0;
+    margin-bottom: 50px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .card {
+    width: 100%;
+    padding: 15px;
+  }
+
+  h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .owner-hover-image {
+    margin-bottom: 20px;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .content {
+    margin: 16px;
+  }
+
+  .card-div {
+    margin-bottom: 30px;
+  }
+
+  .card {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .mouse-glow {
+    display: none;
+  }
 }
