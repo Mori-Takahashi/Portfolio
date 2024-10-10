@@ -16,7 +16,8 @@
 
     <div class="button-container">
       <!-- Turnstile Widget -->
-      <div class="cf-turnstile" data-sitekey="0x4AAAAAAAw3NwmDISYzQJ5I"></div>
+      <ngx-turnstile [siteKey]="'0x4AAAAAAAw3NwmDISYzQJ5I'" (resolved)="sendCaptchaResponse($event)" theme="dark"></ngx-turnstile>
+      <!--<div class="cf-turnstile" data-sitekey="0x4AAAAAAAw3NwmDISYzQJ5I"></div>-->
       <button type="submit">Say Hello :)</button>
     </div>
   </form>
