@@ -19,12 +19,19 @@ textarea::-webkit-scrollbar-thumb {
 form {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   color: rgba(61, 207, 182, 1);
   font-family: "Fira Code", sans-serif;
+  width: 100%;
 
   label {
     margin-bottom: 5px;
+  }
+
+  label,
+  input,
+  textarea {
+    width: 100%;
   }
 
   input,
@@ -48,11 +55,25 @@ form {
     }
   }
 
+  .checkbox-policy {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+
+    input {
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    span {
+      color: white;
+    }
+  }
+
   .button-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     width: 100%;
     margin-top: 15px;
 
@@ -62,11 +83,25 @@ form {
   }
 }
 
-.checkbox-policy {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  input {
-    cursor: pointer;
+/* Media Queries für Responsivität */
+@media (min-width: 768px) {
+  form {
+
+    label,
+    input,
+    textarea {
+      width: 48%;
+      margin-right: 4%;
+
+      &:nth-child(2n) {
+        /*margin-right: 0;*/
+      }
+    }
+
+    .checkbox-policy,
+    .button-container {
+      width: 100%;
+      margin-right: 0;
+    }
   }
 }

@@ -7,7 +7,6 @@
         {{'projectsExploreMore' | translate}}
       </span>
     </div>
-    <!--for hier einbauen-->
     @for (item of procjects; track $index) {
       <div class="content-click">
         <div (click)="openProject($index)" class="project-list">
@@ -22,7 +21,6 @@
         <img class="miniProjectCard" [src]="item.miniImg">
       </div>
     }
-    <!--for ende-->
   </div>
 
   <!--project Card-->

@@ -1,7 +1,3 @@
-section {
-
-}
-
 h3 {
   font-family: Karla, sans-serif;
 }
@@ -22,8 +18,6 @@ span {
 .content {
   margin: 64px;
 }
-
-
 
 .project-list {
   width: 80%;
@@ -48,7 +42,7 @@ span {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  >img {
+  > img {
     width: 115px;
     border-radius: 18px;
     box-shadow: 0 0 0 1px rgba(61, 207, 182, 1);
@@ -85,20 +79,19 @@ span {
 
 .tec-used {
   display: flex;
-  >div {
+  > div {
     margin-left: 10px;
   }
 }
 
-
 .slide-in-right {
-  -webkit-animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-  animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  -webkit-animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 .slide-out-right {
-  -webkit-animation: slide-out-right 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-  animation: slide-out-right 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  -webkit-animation: slide-out-right 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: slide-out-right 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
 }
 
 @-webkit-keyframes slide-out-right {
@@ -125,7 +118,6 @@ span {
     opacity: 0;
   }
 }
-
 
 @-webkit-keyframes slide-in-right {
   0% {
@@ -169,7 +161,9 @@ span {
 .card {
   border: solid 1px rgba(61, 207, 182, 1);
   width: 80vw;
+  max-width: 800px;
   height: 60vh;
+  max-height: 600px;
   border-radius: 50px;
   background-image: url("../../../public/hero.png");
   background-size: cover;
@@ -184,18 +178,17 @@ span {
 
 .title-number {
   margin: 0;
-  >h2 {
+  > h2 {
     margin: 0;
     font-size: 64px;
   }
-  h1{
+  h1 {
     font-family: "Fira Code", sans-serif;
     color: white;
     margin: 0;
     font-size: 128px;
   }
 }
-
 
 .close {
   color: white;
@@ -226,7 +219,7 @@ span {
   display: flex;
   align-items: center;
   margin-left: 15px;
-  >span {
+  > span {
     margin-left: 10px;
   }
 }
@@ -244,11 +237,11 @@ span {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  >div {
+  > div {
     margin-bottom: 15px;
     display: flex;
   }
-  >img {
+  > img {
     max-width: 480px;
     max-height: 340px;
     width: 100%;
@@ -278,7 +271,6 @@ span {
   align-items: center;
 }
 
-
 .d-non {
   display: none;
 }
@@ -287,4 +279,130 @@ span {
   a {
     margin-left: 10px;
   }
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .content {
+    margin: 32px;
+  }
+
+  h2 {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+  }
+
+  .content-click {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 0;
+    > img {
+      display: none;
+    }
+  }
+
+  .project-list {
+    width: 100%;
+  }
+
+  .project-border {
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+  }
+
+  .arrow-right {
+    align-self: flex-end;
+  }
+
+  .miniProjectCard {
+    width: 100%;
+  }
+
+  .card {
+    border-radius: 20px;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    min-height: 100vh;
+    background-color: rgba(128, 128, 128, 0.5);
+    min-width: 100%;
+}
+
+.title-number h1 {
+font-size: 64px;
+}
+
+.title-number h2 {
+font-size: 32px;
+}
+
+.img-close > img {
+max-width: 100%;
+max-height: 200px;
+}
+
+.img-title {
+width: 100%;
+}
+
+.d-flex.c-space-between-width-100 {
+flex-direction: column;
+align-items: flex-start;
+}
+
+.margin-left-10 a {
+margin-left: 0;
+margin-right: 10px;
+margin-top: 10px;
+}
+
+.next-project {
+margin-top: 20px;
+align-self: flex-end;
+}
+}
+
+@media (max-width: 600px) {
+h2 {
+font-size: clamp(1.5rem, 5vw, 2.5rem);
+}
+
+.content {
+margin: 16px;
+}
+
+.project-border {
+padding: 10px;
+}
+
+.img-close > img {
+max-height: 150px;
+}
+
+.title-number h1 {
+font-size: 48px;
+}
+
+.title-number h2 {
+font-size: 24px;
+}
+
+.card {
+padding: 10px;
+}
+
+.close-button {
+font-size: 30px;
+}
+
+.next-project {
+font-size: 16px;
+}
+
+.margin-left-10 a {
+font-size: 14px;
+}
 }
