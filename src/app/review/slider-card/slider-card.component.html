@@ -2,34 +2,34 @@
   <div class="card-slider-styling">
     <div class="card">
       <div class="text">
-        {{reviewService.reviews[rightCard].text}}
+        {{reviews[rightCard]?.text}}
       </div>
       <div class="aut-line">
-        <img src="{{reviewService.reviews[rightCard].authorImg}}" alt="{{reviewService.reviews[rightCard].author}}">
+        <img src="{{reviews[rightCard]?.authorImg}}" alt="{{reviews[rightCard]?.author}}">
         <div></div>
-        <span>{{reviewService.reviews[rightCard].author}}</span>
+        <span>{{reviews[rightCard]?.author}}</span>
       </div>
     </div>
 
     <div class="card">
       <div class="text">
-        {{reviewService.reviews[currentIndex].text}}
+        {{reviews[currentIndex]?.text}}
       </div>
       <div class="aut-line">
-        <img src="{{reviewService.reviews[currentIndex].authorImg}}" alt="{{reviewService.reviews[currentIndex].author}}">
+        <img src="{{reviews[currentIndex]?.authorImg}}" alt="{{reviews[currentIndex]?.author}}">
         <div></div>
-        <span>{{reviewService.reviews[currentIndex].author}}</span>
+        <span>{{reviews[currentIndex]?.author}}</span>
       </div>
     </div>
 
     <div class="card">
       <div class="text">
-        {{reviewService.reviews[leftCard].text}}
+        {{reviews[leftCard]?.text}}
       </div>
       <div class="aut-line">
-        <img src="{{reviewService.reviews[leftCard].authorImg}}" alt="{{reviewService.reviews[leftCard].author}}">
+        <img src="{{reviews[leftCard]?.authorImg}}" alt="{{reviews[leftCard]?.author}}">
         <div></div>
-        <span>{{reviewService.reviews[leftCard].author}}</span>
+        <span>{{reviews[leftCard]?.author}}</span>
       </div>
     </div>
   </div>

@@ -37,7 +37,7 @@
           </div>
           <div>
             <h3>{{'projectCardWhatIs' | translate }}</h3>
-            <span>{{selectedProject.description}}</span>
+            <span>{{ description }}</span>
           </div>
           <div class="d-flex">
             <div *ngFor="let tech of selectedProject.tecUsed" class="tec-used-card">
@@ -58,15 +58,7 @@
         <button [innerHTML]="'projectCardNextProject' | translate" (click)="nextProject()" class="next-project"></button>
       </div>
     </div>
-    <!---->
   </div>
   <!--project Card-->
 </section>
 
-
-<!--
-<div class="img-close">
-          <img [src]="selectedProject.imageUrl" alt="{{selectedProject.name}}">
-        </div>
-
--->
