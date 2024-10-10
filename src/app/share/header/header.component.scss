@@ -3,6 +3,7 @@ $color-primary: white;
 $font-primary: Karla, sans-serif;
 $font-secondary: "Fira Code", sans-serif;
 
+
 header {
   display: flex;
   justify-content: space-between;
@@ -181,3 +182,4 @@ header {
 .checkbox-wrapper-8 .tgl-skewed:checked + .tgl-btn:active:after {
   left: 10%;
 }
+
