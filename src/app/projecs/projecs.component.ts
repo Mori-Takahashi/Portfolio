@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import {DecimalPipe} from "@angular/common";
 import {NgFor} from "@angular/common";
 import {NgIf} from "@angular/common";
+import {TranslateModule} from "@ngx-translate/core";
+import {HeaderComponent} from "../share/header/header.component";
+import {TranslateStatusService} from "../service/translate-status.service";
 
 @Component({
   selector: 'app-projecs',
@@ -9,7 +12,9 @@ import {NgIf} from "@angular/common";
   imports: [
     DecimalPipe,
     NgFor,
-    NgIf
+    NgIf,
+    TranslateModule,
+    HeaderComponent
   ],
   templateUrl: './projecs.component.html',
   styleUrl: './projecs.component.scss'
@@ -17,6 +22,23 @@ import {NgIf} from "@angular/common";
 
 
 export class ProjecsComponent {
+
+  constructor(private translateStatus: TranslateStatusService) {
+  }
+
+
+/**
+ * Gets the description of the currently selected project.
+ * If the translation status is active, returns the description in the current language.
+ * Otherwise, returns the description in German.
+ *
+ * @returns {string} The description of the selected project.
+ */
+get description(): string {
+  return this.translateStatus.translateStatus
+    ? this.selectedProject?.description
+    : this.cardProjectsDescriptionDE[this.selectedProjectIndex]?.description;
+}
 
   procjects: Projecs[] = [{
     name: 'Join',
@@ -60,6 +82,13 @@ export class ProjecsComponent {
       github: 'https://github.com/Mori-Takahashi/Pokedex'
     }
   ];
+
+  cardProjectsDescriptionDE = [
+    {description: 'Aufgabenmanager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.'},
+    {description: 'Ein Mini-Jump-and-Run-Spiel. Sammle Münzen und Salsa, um das böse Huhn zu besiegen.'},
+    {description: 'Eine Pokedex-App, mit der Sie nach Pokemon nach Namen suchen können. Zeigt Informationen über das Pokemon und seine Fähigkeiten an.'}
+  ]
+
 
   /**
    * The currently selected project.

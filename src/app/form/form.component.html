@@ -3,16 +3,15 @@
   <!--blau-->
   <div class="box-contact-contact-me-text">
     <div class="left-contact-me-text">
-      <span>Contact me</span>
-      <h1>Let's work <br> together</h1>
+      <span>{{'heroContactMe' | translate}}</span>
+      <h1 [innerHTML]="'contactLetsWorkTogether' | translate"></h1>
       <div>
-        <span style="font-family: 'Fira Code', sans-serif">Got a problem to solve?</span>
-        <p>
-          Contact me through this form, I am interested in hearing from you, knowing <br>
-          your ideas and contributing to your projects with my work.
+        <span style="font-family: 'Fira Code', sans-serif">{{'contactGotAProblem' | translate}}</span>
+        <p [innerHTML]="'contactGotAProblemText' | translate">
+
         </p>
         <div class="d-flex">
-          <p>Need a Frontend Developer?</p><p class="blue-letstalk">Let's talk!</p>
+          <p>{{'contactText1' | translate}}</p><p class="blue-letstalk">{{'contactText2' | translate}}</p>
         </div>
       </div>
     </div>

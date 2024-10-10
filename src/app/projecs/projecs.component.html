@@ -2,10 +2,9 @@
   <div class="content">
     <h3>Portfolio</h3>
     <div>
-      <h2>Featured Projects</h2>
+      <h2>{{'projectsTitle' | translate}}</h2>
       <span class="explore-more-text">
-        Explore a selection of my work here - Interact with
-        projects to see my skills in action.
+        {{'projectsExploreMore' | translate}}
       </span>
     </div>
     <!--for hier einbauen-->
@@ -37,8 +36,8 @@
             <h2>{{selectedProject.name}}</h2>
           </div>
           <div>
-            <h3>What is this project about</h3>
-            <span>{{selectedProject.description}}</span>
+            <h3>{{'projectCardWhatIs' | translate }}</h3>
+            <span>{{ description }}</span>
           </div>
           <div class="d-flex">
             <div *ngFor="let tech of selectedProject.tecUsed" class="tec-used-card">
@@ -56,18 +55,10 @@
           <a class="a-link-button" href="{{selectedProject.liveTest}}" target="_blank">Live Test &#8599;</a>
           <a class="a-link-button" href="{{selectedProject.github}}" target="_blank">Github &#8599;</a>
         </div>
-        <button (click)="nextProject()" class="next-project">Next projects &#10230;</button>
+        <button [innerHTML]="'projectCardNextProject' | translate" (click)="nextProject()" class="next-project"></button>
       </div>
     </div>
-    <!---->
   </div>
   <!--project Card-->
 </section>
 
-
-<!--
-<div class="img-close">
-          <img [src]="selectedProject.imageUrl" alt="{{selectedProject.name}}">
-        </div>
-
--->

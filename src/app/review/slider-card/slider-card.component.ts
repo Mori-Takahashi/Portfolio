@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {ReviewService} from "../../service/review.service";
 import {NgClass} from "@angular/common";
+import {TranslateStatusService} from "../../service/translate-status.service";
 
 @Component({
   selector: 'app-slider-card',
@@ -13,11 +14,19 @@ import {NgClass} from "@angular/common";
 })
 export class SliderCardComponent {
 
-  currentIndex: number = 0;
-  leftCard: number = 0;
-  rightCard: number = 1;
+  constructor(public reviewService: ReviewService, private translateStatus: TranslateStatusService) {}
 
-  constructor(public reviewService: ReviewService) {}
+  get reviews() {
+    return this.translateStatus.translateStatus
+      ? this.reviewService.reviews
+      : this.reviewService.reviewsDE;
+  }
+
+
+  currentIndex: number = 1;
+  leftCard: number = 0;
+  rightCard: number = 0;
+
 
   nextReview() {
     if (this.currentIndex < this.reviewService.reviews.length - 1) {
@@ -33,7 +42,7 @@ export class SliderCardComponent {
     if (this.currentIndex > 0) {
       this.currentIndex--;
     } else {
-      this.currentIndex = this.reviewService.reviews.length - 1;
+      this.currentIndex = this.reviews.length - 1;
     }
     this.leftCardIndex();
     this.rightCardIndex();
@@ -43,12 +52,12 @@ export class SliderCardComponent {
     if (this.currentIndex > 0) {
       this.leftCard = this.currentIndex - 1;
     } else {
-      this.leftCard = this.reviewService.reviews.length - 1;
+      this.leftCard = this.reviews.length - 1;
     }
   }
 
   rightCardIndex() {
-    if (this.currentIndex < this.reviewService.reviews.length - 1) {
+    if (this.currentIndex < this.reviews.length - 1) {
       this.rightCard = this.currentIndex + 1;
     } else {
       this.rightCard = 0;

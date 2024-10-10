@@ -1,17 +1,17 @@
 <section>
   <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-    <label for="name">What's your name?</label>
-    <input placeholder="Your name goes here" id="name" formControlName="name" type="text" required>
+    <label for="name">{{'contactForm' | translate}}</label>
+    <input [placeholder]="'contactFormPlaceholderName' | translate" id="name" formControlName="name" type="text" required>
 
-    <label for="email">What's your email?</label>
-    <input placeholder="youmail@email.com" id="email" formControlName="email" type="email" required>
+    <label for="email">{{'contactFormEmail' | translate }}</label>
+    <input [placeholder]="'contactFormEmailPlaceholder' | translate" id="email" formControlName="email" type="email" required>
 
-    <label for="message">How can i help you?</label>
-    <textarea placeholder="Hello Lyonel, I am interested in..." id="message" formControlName="message" required></textarea>
+    <label for="message">{{'contactFormText' | translate }}</label>
+    <textarea [placeholder]="'contactFormTextPlaceholder' | translate" id="message" formControlName="message" required></textarea>
 
     <label class="checkbox-policy">
       <input type="checkbox" name="Privacy Policy" id="privacyPolicy" formControlName="privacyPolicy" required>
-      <span style="color: white">I've read the <a style="color: rgba(61, 207, 182, 1);" href="https://google.com">privacy policy</a> and agree to the processing of my data as outlined.</span>
+      <span [innerHTML]="'contactFormprivacyPolicy' | translate" style="color: white"></span>
     </label>
 
     <div class="button-container">
