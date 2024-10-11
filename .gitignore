@@ -42,6 +42,7 @@ testem.log
 Thumbs.db
 
 
+/src/app/legal-notice/legal-notice.component.html
 /img.png
 /src/app/service/form/mail-api.service.spec.ts
 /src/app/service/form/mail-api.service.ts
