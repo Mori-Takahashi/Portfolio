@@ -28,7 +28,7 @@ updateEmailInnerHtml() {
     if (window.innerWidth <= 600) {
       emailHTML.innerHTML = '<img src="icons/mail.svg" alt="mail">';
     } else {
-      emailHTML.innerHTML = '<img src="icons/mail.svg" alt="mail">';
+      emailHTML.innerHTML = 'info@lyonelberzen.dev';
     }
   }
 }

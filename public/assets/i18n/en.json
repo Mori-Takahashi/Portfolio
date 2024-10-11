@@ -26,7 +26,7 @@
   "contactFormEmailPlaceholder": "youmail@email.com",
   "contactFormText": "How can i help you?",
   "contactFormTextPlaceholder": "Hello Lyonel, I am interested in...",
-  "contactFormprivacyPolicy": "I've read the <a style=\"color: rgba(61, 207, 182, 1);\" href=\"https://google.com\">privacy policy</a> and agree to the processing of my data as outlined.",
+  "contactFormprivacyPolicy": "I've read the <a style=\"color: rgba(61, 207, 182, 1);\" href='privacyPolicy'>privacy policy</a> and agree to the processing of my data as outlined.",
   "projectsExploreMore": "Explore a selection of my work here - Interact with\n        projects to see my skills in action.",
   "projectsTitle": "Featured Projects",
   "projectCardWhatIs": "What is this project about",
