@@ -1,17 +1,20 @@
 <header>
+  <!-- Navbar-Links (Desktop) -->
   <div class="navbarLinks">
     <div class="checkbox-wrapper-8">
       <input type="checkbox" (change)="onCheckboxChange($event)" id="cb3-8" class="tgl tgl-skewed">
       <label for="cb3-8" data-tg-on="EN" data-tg-off="DE" class="tgl-btn"></label>
     </div>
-    <a href="#about-me">{{'headerAboutMe' | translate}}</a>
+    <a href="#about-me">{{ 'headerAboutMe' | translate }}</a>
     <a href="#skills">Skills</a>
-    <a href="#project">{{'headerProjects' | translate}}</a>
+    <a href="#project">{{ 'headerProjects' | translate }}</a>
   </div>
+
+  <!--LOGO-->
   <div class="letters-name">
     <div class="letters">
       <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-            viewBox="223 194 90 90" enable-background="new 230 190 90 90" xml:space="preserve">
+           viewBox="223 194 90 90" enable-background="new 230 190 90 90" xml:space="preserve">
 <path fill="#3DCFB6" opacity="1.000000" stroke="none"
       d="M268.007324,211.589661
 	C275.038208,213.071548 280.400879,216.207123 282.070099,223.202271
@@ -60,4 +63,32 @@ z"/>
       <span>Lyonel<br>Berzen</span>
     </div>
   </div>
+
+
+
+  <!-- Burger-Menü-Symbol -->
+  <input type="checkbox" id="checkbox">
+  <label for="checkbox" class="toggle">
+    <div class="bars" id="bar1"></div>
+    <div class="bars" id="bar2"></div>
+    <div class="bars" id="bar3"></div>
+  </label>
+
+  <!-- Dropdown-Menü -->
+  <div class="dropdown-menu">
+    <a href="#about-me">{{ 'headerAboutMe' | translate }}</a>
+    <a href="#skills">Skills</a>
+    <a href="#project">{{ 'headerProjects' | translate }}</a>
+    <div class="checkbox-wrapper-8">
+      <input type="checkbox" (change)="onCheckboxChange($event)" id="cb3-8-mobile" class="tgl tgl-skewed">
+      <label for="cb3-8-mobile" data-tg-on="EN" data-tg-off="DE" class="tgl-btn"></label>
+    </div>
+  </div>
+
+
+
+
+
+
+
 </header>
