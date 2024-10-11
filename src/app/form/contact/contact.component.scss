@@ -16,6 +16,10 @@ textarea::-webkit-scrollbar-thumb {
   border-radius: 9px;
 }
 
+.invalid-field {
+  border: 2px solid red;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -53,6 +57,16 @@ form {
     @include placeholder {
       color: rgba(255, 255, 255, 0.18);
     }
+  }
+
+  @keyframes flashRedWhite {
+    0% { color: red; }
+    50% { color: white; }
+    100% { color: red; }
+  }
+
+  .flash {
+    animation: flashRedWhite 1s ease-in-out 3;
   }
 
   .checkbox-policy {

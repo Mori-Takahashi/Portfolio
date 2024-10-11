@@ -1,24 +1,39 @@
 <section>
   <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
-    <label for="name">{{'contactForm' | translate}}</label>
-    <input [placeholder]="'contactFormPlaceholderName' | translate" id="name" formControlName="name" type="text" required>
+    <label id="nameLabel" for="name">{{'contactForm' | translate}}</label>
+    <input [disabled]="isLoading" [placeholder]="'contactFormPlaceholderName' | translate" id="name" formControlName="name" type="text" required>
 
-    <label for="email">{{'contactFormEmail' | translate }}</label>
-    <input [placeholder]="'contactFormEmailPlaceholder' | translate" id="email" formControlName="email" type="email" required>
+    <label id="emailLabel" for="email">{{'contactFormEmail' | translate }}</label>
+    <input [disabled]="isLoading" [placeholder]="'contactFormEmailPlaceholder' | translate" id="email" formControlName="email" type="email" required>
 
-    <label for="message">{{'contactFormText' | translate }}</label>
-    <textarea [placeholder]="'contactFormTextPlaceholder' | translate" id="message" formControlName="message" required></textarea>
+    <label id="messageLabel" for="message">{{'contactFormText' | translate }}</label>
+    <textarea [disabled]="isLoading" [placeholder]="'contactFormTextPlaceholder' | translate" id="message" formControlName="message" required></textarea>
 
     <label class="checkbox-policy">
-      <input type="checkbox" name="Privacy Policy" id="privacyPolicy" formControlName="privacyPolicy" required>
-      <span [innerHTML]="'contactFormprivacyPolicy' | translate" style="color: white"></span>
+      <input [disabled]="isLoading" type="checkbox" name="Privacy Policy" id="privacyPolicy" formControlName="privacyPolicy" required>
+      <span id="checkBoxSpan" [innerHTML]="'contactFormprivacyPolicy' | translate" style="color: white"></span>
     </label>
 
     <div class="button-container">
       <!-- Turnstile Widget -->
       <ngx-turnstile [siteKey]="'0x4AAAAAAAw3NwmDISYzQJ5I'" (resolved)="sendCaptchaResponse($event)" theme="dark"></ngx-turnstile>
-      <!--<div class="cf-turnstile" data-sitekey="0x4AAAAAAAw3NwmDISYzQJ5I"></div>-->
-      <button type="submit">Say Hello :)</button>
+
+
+      <div *ngIf="contactForm.get('message')?.hasError('noScript')">
+        <p style="color: red">Das einfügen von Scripten ist nicht Erlaubt</p>
+      </div>
+
+      <div *ngIf="contactForm.get('message')?.hasError('noHTMLTags')">
+        <p style="color: red">HTML Tags sind nicht erlaubt</p>
+      </div>
+
+      <div *ngIf="hasError">
+        <p style="color: red">Fehler beim Senden des Formulars. Bitte versuchen Sie es erneut.</p>
+      </div>
+
+
+
+      <button type="submit" [disabled]="isLoading">Say Hello :)</button>
     </div>
   </form>
 </section>

@@ -44,3 +44,7 @@ Thumbs.db
 
 /img.png
 /public
+/src/app/service/form/mail-api.service.spec.ts
+/src/app/service/form/mail-api.service.ts
+/src/app/service/form/xss-protect.service.spec.ts
+/src/app/service/form/xss-protect.service.ts
