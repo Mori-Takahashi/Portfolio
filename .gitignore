@@ -48,3 +48,7 @@ Thumbs.db
 /src/app/service/form/mail-api.service.ts
 /src/app/service/form/xss-protect.service.spec.ts
 /src/app/service/form/xss-protect.service.ts
+/src/app/privacy-policy/privacy-policy.component.html
+/src/app/privacy-policy/privacy-policy.component.scss
+/src/app/privacy-policy/privacy-policy.component.spec.ts
+/src/app/privacy-policy/privacy-policy.component.ts
