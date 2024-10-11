@@ -43,12 +43,12 @@ get description(): string {
   procjects: Projecs[] = [{
     name: 'Join',
     tecUsed: 'HTML | CSS | JavaScript | Firebase',
-    miniImg: 'project-img/join.svg'
+    miniImg: 'project-img/join.jpg'
   },
     {
       name: 'El Pollo Loco',
       tecUsed: 'HTML | CSS | JavaScript',
-      miniImg: 'project-img/el-pollo-loco.svg'
+      miniImg: 'project-img/el-pollo-loco.jpg'
     },
     {
     name: 'Pokedex',
@@ -61,7 +61,7 @@ get description(): string {
       name: 'Join',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       tecUsed: ['CSS', 'HTML', 'JavaScript'],
-      imageUrl: 'project-img/join.svg',
+      imageUrl: 'project-img/join.jpg',
       liveTest: 'https://join-board.pages.dev/',
       github: 'https://github.com/Mori-Takahashi/Join-board'
     },
@@ -69,7 +69,7 @@ get description(): string {
       name: 'El Pollo Loco',
       description: 'A mini Jump and Run game. Collect coins and salsa to defeat the evil chicken.',
       tecUsed: ['HTML', 'CSS', 'JavaScript'],
-      imageUrl: 'project-img/el-pollo-loco.svg',
+      imageUrl: 'project-img/el-pollo-loco.jpg',
       liveTest: 'https://el-pollo-loco.pages.dev/',
       github: 'https://github.com/Mori-Takahashi/el-pollo-loco'
     },
