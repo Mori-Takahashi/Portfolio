@@ -1,18 +1,20 @@
 import { Component } from '@angular/core';
 import {Router, RouterLink} from "@angular/router";
+import {TranslateModule} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-success',
   standalone: true,
   imports: [
-    RouterLink
+    RouterLink,
+    TranslateModule
   ],
   templateUrl: './success.component.html',
   styleUrl: './success.component.scss'
 })
 export class SuccessComponent {
 
-  countdown: number = 1000;
+  countdown: number = 5;
 
   constructor(private router: Router) {
   }

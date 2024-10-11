@@ -31,5 +31,13 @@
   "projectsTitle": "Ausgewählte Projekte",
   "projectCardWhatIs": "Worum geht es bei diesem Projekt?",
   "projectCardNextProject": "Nächstes Projekt &#10230;",
-  "reviewTitle": "Was meine Kollegen über mich sagen"
+  "reviewTitle": "Was meine Kollegen über mich sagen",
+  "404Title": "Seite nicht gefunden",
+  "404PTxt": "Die Seite, die Sie suchen, existiert leider nicht.",
+  "404Home": "Startseite",
+  "success": "E-Mail wurde versand!\uD83C\uDF89",
+  "counter1": "Du wirst in:  ",
+  "counter2": "  wieder auf die Startseite weitergeleitet.",
+  "counter3": "Wenn nicht passiert drück",
+  "counter4": "hier"
 }

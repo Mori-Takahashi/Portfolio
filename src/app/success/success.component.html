@@ -4,11 +4,11 @@
     <div class="paper"></div>
     <div class="keyboard"></div>
   </div>
-  <h1>E-Mail wurde versand!🎉</h1>
+  <h1>{{'success' | translate}}</h1>
   <div>
-    <span>Du wirst in:  </span>
+    <span>{{'counter1' | translate}}</span>
     <span style="color: beige">{{countdown}}</span>
-    <span>  wieder auf die Startseite weitergeleitet.</span>
+    <span>{{'counter2' | translate}}</span>
   </div>
-  <span>Wenn nicht passiert drück <a [routerLink]="['']">hier</a></span>
+  <span>{{'counter3' | translate}} <a [routerLink]="['']">{{'counter4' | translate}}</a></span>
 </section>

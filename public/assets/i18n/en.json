@@ -31,5 +31,13 @@
   "projectsTitle": "Featured Projects",
   "projectCardWhatIs": "What is this project about",
   "projectCardNextProject": "Next projects &#10230;",
-  "reviewTitle": "What my colleagues say about me"
+  "reviewTitle": "What my colleagues say about me",
+  "404Title": "Page Not Found",
+  "404PTxt": "Sorry, the page you are looking for does not exist.",
+  "404Home": "Home",
+  "success": "E-mail has been sent!\uD83C\uDF89",
+  "counter1": "You will be in: ",
+  "counter2": " redirected to the homepage.",
+  "counter3": "If this does not happen press",
+  "counter4": "here"
 }
