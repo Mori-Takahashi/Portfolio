@@ -386,9 +386,23 @@ font-size: 48px;
 font-size: 24px;
 }
 
-.card {
-padding: 10px;
-}
+  .card {
+    border: solid 1px rgba(61, 207, 182, 1);
+    width: 100vh;
+    max-width: unset;
+    height: 90vh;
+    max-height: unset;
+    border-radius: 50px;
+    background-image: url("../../../public/hero.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
 
 .close-button {
 font-size: 30px;
@@ -401,4 +415,11 @@ font-size: 16px;
 .margin-left-10 a {
 font-size: 14px;
 }
+
+  .responsive-colum {
+    display: flex;
+    flex-direction: column;
+  }
+
+
 }
