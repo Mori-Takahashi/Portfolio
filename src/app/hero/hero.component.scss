@@ -108,7 +108,7 @@ svg {
   position: absolute;
   height: 50px;
   left: 0;
-  right: 0;
+  right: 1px;
   bottom: 80px;
   display: flex;
   align-items: center;
@@ -167,5 +167,12 @@ svg {
 
   .social_media {
     margin-right: 5px;
+  }
+}
+/*1920*/
+@media (min-width: 1920px) {
+  .banderole {
+    left: unset;
+    right: unset;
   }
 }

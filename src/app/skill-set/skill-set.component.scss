@@ -238,7 +238,6 @@ h3 {
   .skill-icons {
     margin-top: 20px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
 
@@ -285,5 +284,14 @@ h3 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .padding-div {
+    padding: 32px;
+    flex-direction: column;
+    grid-template-columns: none;
   }
 }
