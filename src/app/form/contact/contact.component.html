@@ -16,8 +16,8 @@
 
     <div class="button-container">
       <!-- Turnstile Widget -->
-      <ngx-turnstile [siteKey]="'0x4AAAAAAAw3NwmDISYzQJ5I'" (resolved)="sendCaptchaResponse($event)" theme="dark"></ngx-turnstile>
-
+      <ngx-turnstile [siteKey]="'1x00000000000000000000AA'" (resolved)="sendCaptchaResponse($event)" theme="dark"></ngx-turnstile>
+      <!--0x4AAAAAAAw3NwmDISYzQJ5I-->
 
       <div *ngIf="contactForm.get('message')?.hasError('noScript')">
         <p style="color: red">Das einfügen von Scripten ist nicht Erlaubt</p>
@@ -29,6 +29,10 @@
 
       <div *ngIf="hasError">
         <p style="color: red">Fehler beim Senden des Formulars. Bitte versuchen Sie es erneut.</p>
+      </div>
+
+      <div *ngIf="contactForm.get('cf-turnstile-response')?.value === ''">
+        <p style="color: red">Bitte lösen Sie das Captcha.</p>
       </div>
 
 

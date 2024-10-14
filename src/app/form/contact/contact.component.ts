@@ -79,6 +79,7 @@ export class ContactComponent implements OnInit {
 
   alertUser() {
     let form = this.contactForm.value;
+    let turnstileResponse = document.getElementById('cf-turnstile-response');
     let nameLabel = document.getElementById('nameLabel');
     let emailLabel = document.getElementById('emailLabel');
     let messageLabel = document.getElementById('messageLabel');
