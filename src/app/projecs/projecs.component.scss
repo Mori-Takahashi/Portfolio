@@ -162,7 +162,6 @@ span {
   border: solid 1px rgba(61, 207, 182, 1);
   width: 80vw;
   max-width: 800px;
-  height: 60vh;
   max-height: 600px;
   border-radius: 50px;
   background-image: url("../../../public/hero.png");
@@ -206,7 +205,6 @@ span {
   border: none;
   transition: none;
   font-size: 40px;
-  height: 0;
   &:hover {
     cursor: pointer;
     color: rgba(61, 207, 182, 1);
@@ -322,6 +320,8 @@ span {
     border-radius: 16px;
     padding: 15px;
     background-color: rgba(128, 128, 128, 0.5);
+    height: unset;
+    width: unset;
 }
 
 .title-number h1 {
@@ -343,6 +343,7 @@ width: 100%;
 
 .d-flex.c-space-between-width-100 {
 flex-direction: column-reverse;
+  width: unset;
 }
 
   .non-reverse {
@@ -361,7 +362,7 @@ align-self: flex-end;
 }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
 h2 {
 font-size: clamp(1.5rem, 5vw, 2.5rem);
 }

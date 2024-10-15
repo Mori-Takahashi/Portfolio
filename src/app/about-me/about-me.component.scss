@@ -83,6 +83,20 @@ h2 {
 }
 
 /* Responsive Styles */
+
+@media (max-width: 1022px) {
+  .content {
+    flex-direction: column;
+    margin: 32px;
+    height: auto;
+  }
+
+  .img-me {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 @media (max-width: 900px) {
   .content {
     flex-direction: column;

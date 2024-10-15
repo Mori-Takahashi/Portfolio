@@ -145,5 +145,13 @@ button {
     overflow-x: hidden;
   }
 
+  .aut-line {
+    >span {
+      margin: unset;
+    }
+  }
+
+
+
 
 }
