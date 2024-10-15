@@ -54,6 +54,11 @@ get description(): string {
     name: 'Pokedex',
     tecUsed: 'HTML | CSS | JavaScript | Bootstrap',
       miniImg: 'project-img/pokedex.png'
+    },
+    {
+      name: 'Portfolio',
+      tecUsed: 'HTML | CSS | JavaScript | Angular',
+      miniImg: 'project-img/portfolio.png'
     }];
 
   cardProjects = [
@@ -80,13 +85,22 @@ get description(): string {
       imageUrl: 'project-img/pokedex.png',
       liveTest: 'https://pokedex.lyonelberzen.dev',
       github: 'https://github.com/Mori-Takahashi/Pokedex'
+    },
+    {
+      name: 'Portfolio',
+      description: 'Personal portfolio website. Showcases my projects and provides information about me.',
+      tecUsed: ['HTML', 'CSS', 'JavaScript', 'Angular'],
+      imageUrl: 'project-img/portfolio.png',
+      liveTest: 'https://lyonelberzen.dev',
+      github: 'https://github.com/Mori-Takahashi/Portfolio'
     }
   ];
 
   cardProjectsDescriptionDE = [
     {description: 'Aufgabenmanager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.'},
     {description: 'Ein Mini-Jump-and-Run-Spiel. Sammle Münzen und Salsa, um das böse Huhn zu besiegen.'},
-    {description: 'Eine Pokedex-App, mit der Sie nach Pokemon nach Namen suchen können. Zeigt Informationen über das Pokemon und seine Fähigkeiten an.'}
+    {description: 'Eine Pokedex-App, mit der Sie nach Pokemon nach Namen suchen können. Zeigt Informationen über das Pokemon und seine Fähigkeiten an.'},
+    {description: 'Persönliche Portfolio-Website. Zeigt meine Projekte und bietet Informationen über mich.'}
   ]
 
 
@@ -167,7 +181,7 @@ get description(): string {
     let iconMap: { [key: string]: string } = {
       'CSS': 'icons/card_CSS.svg',
       'HTML': 'icons/card_HTML.svg',
-      'Angular': 'icons/card_Angular.svg',
+      'Angular': 'icons/card_angular.svg',
       'TypeScript': 'icons/card_TS.svg',
       'JavaScript': 'icons/card_JavaScript.svg',
       'Firebase': 'icons/card_Firebase.svg',
