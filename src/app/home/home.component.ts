@@ -15,7 +15,7 @@ import {FormComponent} from "../form/form.component";
     SkillSetComponent,
     ProjecsComponent,
     ReviewComponent,
-    FormComponent
+    FormComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'

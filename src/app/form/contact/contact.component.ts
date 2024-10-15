@@ -54,7 +54,6 @@ export class ContactComponent implements OnInit {
       this.isLoading = true;
       this.hasError = false;
     } else {
-      console.log('Form is invalid');
       this.alertUser();
     }
   }
@@ -95,16 +94,13 @@ export class ContactComponent implements OnInit {
     if (form.name === '' && nameLabel) {
       nameLabel.classList.add('flash');
       hasError = true;
-    }
-    if (form.email === '' && emailLabel) {
+    } else if (form.email === '' && emailLabel) {
       emailLabel.classList.add('flash');
       hasError = true;
-    }
-    if (form.message === '' && messageLabel) {
+    } else if (form.message === '' && messageLabel) {
       messageLabel.classList.add('flash');
       hasError = true;
-    }
-    if (form.privacyPolicy === false && privacyPolicyLabel) {
+    } else if (form.privacyPolicy === false && privacyPolicyLabel) {
       privacyPolicyLabel.classList.add('flash');
       hasError = true;
     }

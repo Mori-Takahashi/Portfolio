@@ -1,9 +1,15 @@
-import { Routes } from '@angular/router';
+import {Routes, RouterModule, ExtraOptions} from '@angular/router';
 import {HomeComponent} from "./home/home.component";
 import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
 import {SuccessComponent} from "./success/success.component";
 import {LegalNoticeComponent} from "./legal-notice/legal-notice.component";
 import {PrivacyPolicyComponent} from "./privacy-policy/privacy-policy.component";
+import {NgModule} from "@angular/core";
+
+let routerOptions: ExtraOptions = {
+  anchorScrolling: 'enabled',
+  scrollPositionRestoration: 'enabled'
+};
 
 export const routes: Routes = [
   {path: '', component: HomeComponent },
@@ -14,3 +20,11 @@ export const routes: Routes = [
   {path: '404', component: PageNotFoundComponent},
   {path: '**', component: PageNotFoundComponent}
 ];
+
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes, routerOptions)],
+  exports: [RouterModule]
+})
+
+export class AppRoutingModule {}
