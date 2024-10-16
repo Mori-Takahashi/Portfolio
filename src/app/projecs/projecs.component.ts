@@ -89,7 +89,7 @@ get description(): string {
     {
       name: 'Portfolio',
       description: 'Personal portfolio website. Showcases my projects and provides information about me.',
-      tecUsed: ['HTML', 'CSS', 'JavaScript', 'Angular'],
+      tecUsed: ['HTML', 'SCSS', 'TypeScript', 'Angular'],
       imageUrl: 'project-img/portfolio.png',
       liveTest: 'https://lyonelberzen.dev',
       github: 'https://github.com/Mori-Takahashi/Portfolio'
@@ -186,6 +186,7 @@ get description(): string {
       'JavaScript': 'icons/card_JavaScript.svg',
       'Firebase': 'icons/card_Firebase.svg',
       'Bootstrap': 'icons/card_bootstrap.svg',
+      'SCSS': 'icons/card_SCSS.svg'
     };
     return iconMap[tech];
   }
