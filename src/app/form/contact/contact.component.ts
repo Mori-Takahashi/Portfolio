@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from "@angular/forms";
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators, AbstractControl, ValidationErrors, ValidatorFn } from "@angular/forms";
 import { RouterLink } from "@angular/router";
 import { TranslateModule } from "@ngx-translate/core";
-import {NgxTurnstileModule} from "ngx-turnstile";
-import {XssProtectService} from "../../service/form/xss-protect.service";
-import {NgClass, NgIf} from "@angular/common";
-import {MailAPIService} from "../../service/form/mail-api.service";
+import { NgxTurnstileModule } from "ngx-turnstile";
+import { XssProtectService } from "../../service/form/xss-protect.service";
+import { NgClass, NgIf } from "@angular/common";
+import { MailAPIService } from "../../service/form/mail-api.service";
 
 @Component({
   selector: 'app-contact',
@@ -21,13 +21,14 @@ import {MailAPIService} from "../../service/form/mail-api.service";
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
+
 export class ContactComponent implements OnInit {
   contactForm!: FormGroup;
   isLoading = false;
   hasError = false;
+  brokenEmail = false;
 
   constructor(private fb: FormBuilder, public xssValidate: XssProtectService, private mailAPI: MailAPIService) {}
-
 
   updateTurnstileResponse(response: string | null) {
     this.contactForm.patchValue({ 'cf-turnstile-response': response });
@@ -39,16 +40,22 @@ export class ContactComponent implements OnInit {
 
   ngOnInit() {
     this.contactForm = this.fb.group({
-      name: ['', [Validators.required, this.xssValidate.validate(), this.xssValidate.noHTML()]],
-      email: ['', [Validators.required, Validators.email]],
-      message: ['', [Validators.required, this.xssValidate.validate(), this.xssValidate.noHTML()]],
+      name: ["", [Validators.required, this.xssValidate.validate(), this.xssValidate.noHTML()]],
+      email: ["", [Validators.required, emailWithTLDValidator()]],
+      message: ["", [Validators.required, this.xssValidate.validate(), this.xssValidate.noHTML()]],
       privacyPolicy: [false, Validators.requiredTrue],
-      'cf-turnstile-response': ['', Validators.required],
+      'cf-turnstile-response': ["", Validators.required],
     });
   }
 
-
   onSubmit() {
+    console.log(this.contactForm.value);
+    console.log('Form valid:', this.contactForm.valid);
+    console.log('Name valid:', this.contactForm.get('name')?.valid);
+    console.log('Email valid:', this.contactForm.get('email')?.valid);
+    console.log('Message valid:', this.contactForm.get('message')?.valid);
+    console.log('Privacy Policy valid:', this.contactForm.get('privacyPolicy')?.valid);
+
     if (this.contactForm.valid) {
       this.sendMail(this.contactForm.value);
       this.isLoading = true;
@@ -77,34 +84,41 @@ export class ContactComponent implements OnInit {
   }
 
   alertUser() {
-    let form = this.contactForm.value;
-    let turnstileResponse = document.getElementById('cf-turnstile-response');
     let nameLabel = document.getElementById('nameLabel');
     let emailLabel = document.getElementById('emailLabel');
     let messageLabel = document.getElementById('messageLabel');
     let privacyPolicyLabel = document.getElementById('checkBoxSpan');
 
-    nameLabel?.classList.remove('flash');
-    emailLabel?.classList.remove('flash');
-    messageLabel?.classList.remove('flash');
-    privacyPolicyLabel?.classList.remove('flash');
-
-    let hasError = false;
-
-    if (form.name === '' && nameLabel) {
+    if (this.contactForm.get('name')?.invalid && nameLabel) {
       nameLabel.classList.add('flash');
-      hasError = true;
-    } else if (form.email === '' && emailLabel) {
-      emailLabel.classList.add('flash');
-      hasError = true;
-    } else if (form.message === '' && messageLabel) {
-      messageLabel.classList.add('flash');
-      hasError = true;
-    } else if (form.privacyPolicy === false && privacyPolicyLabel) {
-      privacyPolicyLabel.classList.add('flash');
-      hasError = true;
     }
+
+    if (this.contactForm.get('email')?.invalid && emailLabel) {
+      emailLabel.classList.add('flash');
+      this.brokenEmail = true;
+    }
+
+    if (this.contactForm.get('message')?.invalid && messageLabel) {
+      messageLabel.classList.add('flash');
+    }
+
+    if (this.contactForm.get('privacyPolicy')?.invalid && privacyPolicyLabel) {
+      privacyPolicyLabel.classList.add('flash');
+    }
+
+    setTimeout(() => {
+      nameLabel?.classList.remove('flash');
+      emailLabel?.classList.remove('flash');
+      messageLabel?.classList.remove('flash');
+      privacyPolicyLabel?.classList.remove('flash');
+    }, 2000);
   }
+}
 
-
+export function emailWithTLDValidator(): ValidatorFn {
+  return (control: AbstractControl): ValidationErrors | null => {
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
+    const valid = emailPattern.test(control.value);
+    return valid ? null : { emailWithTLD: true };
+  };
 }
