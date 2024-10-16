@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {RouterLink} from "@angular/router";
 import {TranslateModule} from "@ngx-translate/core";
 
@@ -12,6 +12,10 @@ import {TranslateModule} from "@ngx-translate/core";
   templateUrl: './legal-notice.component.html',
   styleUrl: './legal-notice.component.scss'
 })
-export class LegalNoticeComponent {
+export class LegalNoticeComponent implements OnInit{
+
+  ngOnInit(): void {
+    window.scrollTo(0, 0);
+  }
 
 }
