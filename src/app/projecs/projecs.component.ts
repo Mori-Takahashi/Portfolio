@@ -67,7 +67,7 @@ get description(): string {
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
       tecUsed: ['CSS', 'HTML', 'JavaScript'],
       imageUrl: 'project-img/join.jpg',
-      liveTest: 'https://join-board.pages.dev/',
+      liveTest: 'https://join-board.lyonelberzen.dev/',
       github: 'https://github.com/Mori-Takahashi/Join-board'
     },
     {
@@ -75,7 +75,7 @@ get description(): string {
       description: 'A mini Jump and Run game. Collect coins and salsa to defeat the evil chicken.',
       tecUsed: ['HTML', 'CSS', 'JavaScript'],
       imageUrl: 'project-img/el-pollo-loco.jpg',
-      liveTest: 'https://el-pollo-loco.pages.dev/',
+      liveTest: 'https://el-pollo-loco.lyonelberzen.dev/',
       github: 'https://github.com/Mori-Takahashi/el-pollo-loco'
     },
     {

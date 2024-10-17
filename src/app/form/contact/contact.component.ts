@@ -49,12 +49,6 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.contactForm.value);
-    console.log('Form valid:', this.contactForm.valid);
-    console.log('Name valid:', this.contactForm.get('name')?.valid);
-    console.log('Email valid:', this.contactForm.get('email')?.valid);
-    console.log('Message valid:', this.contactForm.get('message')?.valid);
-    console.log('Privacy Policy valid:', this.contactForm.get('privacyPolicy')?.valid);
 
     if (this.contactForm.valid) {
       this.sendMail(this.contactForm.value);
