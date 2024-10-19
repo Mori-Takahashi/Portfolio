@@ -76,9 +76,9 @@ z"/>
 
   <!-- Dropdown-Menü -->
   <div class="dropdown-menu">
-    <a [routerLink]="['/']" [fragment]="'about-me'">{{ 'headerAboutMe' | translate }}</a>
-    <a [routerLink]="['/']" [fragment]="'skills'" >Skills</a>
-    <a [routerLink]="['/']" [fragment]="'projects'" >{{ 'headerProjects' | translate }}</a>
+    <a [routerLink]="['']" (click)="scrollToElement('about-me')">{{ 'headerAboutMe' | translate }}</a>
+    <a [routerLink]="['']" (click)="scrollToElement('skills')">Skills</a>
+    <a [routerLink]="['']" (click)="scrollToElement('project')">{{ 'headerProjects' | translate }}</a>
     <div class="checkbox-wrapper-8">
       <input type="checkbox" (change)="onCheckboxChange($event)" id="cb3-8-mobile" class="tgl tgl-skewed">
       <label for="cb3-8-mobile" data-tg-on="EN" data-tg-off="DE" class="tgl-btn"></label>
