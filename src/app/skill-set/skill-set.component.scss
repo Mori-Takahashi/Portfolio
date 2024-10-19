@@ -295,4 +295,10 @@ h3 {
     flex-direction: column;
     grid-template-columns: none;
   }
+
+  .skill-icons {
+    grid-template-columns: 65px 65px 65px;
+    gap: 10px;
+    margin-left: unset;
+  }
 }

@@ -71,6 +71,7 @@ form {
   .checkbox-policy {
     display: flex;
     align-items: center;
+    cursor: pointer;
     margin-bottom: 20px;
 
     input {
@@ -176,3 +177,8 @@ button:disabled {
 }
 
 
+@media (hover: none) {
+  .checkbox-policy {
+    display: unset;
+  }
+}
