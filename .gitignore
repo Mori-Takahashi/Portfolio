@@ -53,3 +53,4 @@ Thumbs.db
 /src/app/privacy-policy/privacy-policy.component.spec.ts
 /src/app/privacy-policy/privacy-policy.component.ts
 /public/icons/icon_angular_wht.svg
+src/app/form/contact/sendMail.php
